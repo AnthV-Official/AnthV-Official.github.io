@@ -16,6 +16,12 @@
       background: url('watercolour.png') no-repeat center center fixed;
       background-size: cover;
       text-align: center;
+      animation: fadeIn 1.2s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
     }
 
     .overlay {
@@ -45,7 +51,25 @@
 
     p {
       font-size: 1.2rem;
-      margin-bottom: 2em;
+      margin-bottom: 0.5em;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      justify-content: center;
+    }
+
+    .email-link {
+      color: white;
+      text-decoration: none;
+      font-size: 1.2rem;
+    }
+
+    .email-link i {
+      transition: color 0.3s;
+    }
+
+    .email-link:hover i {
+      color: #d14836;
     }
 
     .links {
@@ -53,7 +77,7 @@
       flex-direction: column;
       gap: 1rem;
       max-width: 400px;
-      margin: 0 auto;
+      margin: 1em auto 0 auto;
     }
 
     .links a {
@@ -102,13 +126,16 @@
   <div class="overlay">
     <img src="prp.png" alt="AnthV Logo" class="logo">
     <h1>AnthV</h1>
-    <p>Composer & Creator — Exploring the light and the shadows</p>
+    <p>Composer & Creator — Exploring the light and the shadows
+      <a class="email-link" href="mailto:anthv.official@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+    </p>
     <div class="links">
       <a href="https://x.com/AnthV_qwq" target="_blank"><i class="fab fa-x-twitter"></i><span>Twitter</span></a>
       <a href="https://instagram.com/anthv_ins" target="_blank"><i class="fab fa-instagram"></i><span>Instagram</span></a>
       <a href="https://youtube.com/@anthv.official" target="_blank"><i class="fab fa-youtube"></i><span>YouTube</span></a>
       <a href="https://soundcloud.com/anthv_official" target="_blank"><i class="fab fa-soundcloud"></i><span>SoundCloud</span></a>
       <a href="https://twitch.tv/AnthV_qwq" target="_blank"><i class="fab fa-twitch"></i><span>Twitch</span></a>
+      <a href="https://bsky.app/profile/anthv.bsky.social" target="_blank"><i class="fab fa-bluesky"></i><span>Bluesky</span></a>
     </div>
   </div>
 </body>

@@ -62,6 +62,7 @@
       text-decoration: none;
       padding: 0.9rem 1.5rem;
       border-radius: 8px;
+      border: 2px solid #f0f0f0;
       font-size: 1rem;
       font-weight: 600;
       transition: all 0.3s;
@@ -74,12 +75,18 @@
     .links a:hover {
       background-color: transparent;
       color: #f0f0f0;
-      border: 2px solid #f0f0f0;
     }
 
-    .links i {
+    .links a i {
       font-size: 1.2rem;
+      transition: color 0.3s;
     }
+
+    .links a:hover .fa-x-twitter { color: #1da1f2; }
+    .links a:hover .fa-instagram { color: #e4405f; }
+    .links a:hover .fa-youtube { color: #ff0000; }
+    .links a:hover .fa-soundcloud { color: #ff7700; }
+    .links a:hover .fa-twitch { color: #9146ff; }
 
     @media (max-width: 600px) {
       h1 { font-size: 2.2rem; }

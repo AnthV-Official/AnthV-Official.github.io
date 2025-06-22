@@ -5,40 +5,123 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>AnthV</title>
   <link rel="icon" type="image/png" href="pfpt.png" />
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
 
-    html,body{margin:0;padding:0;font-family:'Inter',sans-serif;color:#f0f0f0;
-      background:url('watercolour.png') no-repeat center/cover fixed;text-align:center;
-      animation:fadeIn 1.2s ease-in;}
-    @keyframes fadeIn{from{opacity:0;}to{opacity:1;}}
-    .overlay{background:rgba(30,30,40,.6);min-height:100vh;padding:2rem;
-      display:flex;flex-direction:column;justify-content:center;align-items:center;}
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+      color: #f0f0f0;
+      background: url('watercolour.png') no-repeat center center fixed;
+      background-size: cover;
+      text-align: center;
+      animation: fadeIn 1.2s ease-in;
+    }
 
-    .logo{width:150px;height:150px;border-radius:50%;border:2px solid rgba(240,240,240,.95);
-      box-shadow:0 0 10px rgba(255,255,255,.1);object-fit:cover;margin-bottom:1.5rem;}
-    h1{font-size:3rem;margin-bottom:.2em;}
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
 
-    /* Tag-line + e-mail */
-    p{font-size:1.2rem;margin-bottom:.5em;display:flex;gap:.5rem;align-items:center;justify-content:center;}
-    .email-link{display:inline-flex;text-decoration:none;color:#f0f0f0;}
-    .email-link svg{width:1.5rem;height:1.5rem;transition:transform .3s;}
-    .email-link:hover svg{transform:scale(1.15);}
+    .overlay {
+      background-color: rgba(30, 30, 40, 0.6);
+      min-height: 100vh;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
 
-    /* Social buttons */
-    .links{display:flex;flex-direction:column;gap:1rem;max-width:400px;margin:1em auto 0;}
-    .links a{background:rgba(240,240,240,.95);color:#1a1a1a;text-decoration:none;
-      padding:1rem;border-radius:8px;border:2px solid #f0f0f0;font-size:1rem;font-weight:600;
-      display:flex;flex-direction:column;align-items:center;gap:.5rem;transition:.3s;}
-    .links a:hover{background:transparent;color:#f0f0f0;}
-    .links a svg{width:1.8rem;height:1.8rem;transition:transform .3s;}
-    .links a:hover svg{transform:scale(1.1);}
+    .logo {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: 2px solid rgba(240, 240, 240, 0.95);
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+      object-fit: cover;
+      margin-bottom: 1.5rem;
+    }
 
-    /* Small-screen tweaks */
-    @media(max-width:600px){
-      h1{font-size:2.2rem;} p{font-size:1rem;}
-      .logo{width:100px;height:100px;}
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 0.2em;
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 0.5em;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      justify-content: center;
+    }
+
+    .email-link {
+      color: white;
+      text-decoration: none;
+      font-size: 1.2rem;
+    }
+
+    .email-link i {
+      font-size: 1.5rem;
+      transition: color 0.3s;
+      cursor: pointer;
+    }
+
+    .email-link:hover i {
+      color: #d14836;
+    }
+
+    .links {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      max-width: 400px;
+      margin: 1em auto 0 auto;
+    }
+
+    .links a {
+      background-color: rgba(240, 240, 240, 0.95);
+      color: #1a1a1a;
+      text-decoration: none;
+      padding: 1rem;
+      border-radius: 8px;
+      border: 2px solid #f0f0f0;
+      font-size: 1rem;
+      font-weight: 600;
+      transition: all 0.3s;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .links a:hover {
+      background-color: transparent;
+      color: #f0f0f0;
+    }
+
+    .links a i {
+      font-size: 1.8rem;
+      transition: color 0.3s;
+    }
+
+    .links a:hover .fa-x-twitter { color: #1da1f2; }
+    .links a:hover .fa-instagram { color: #e4405f; }
+    .links a:hover .fa-youtube { color: #ff0000; }
+    .links a:hover .fa-soundcloud { color: #ff7700; }
+    .links a:hover .fa-twitch { color: #9146ff; }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 2.2rem; }
+      p { font-size: 1rem; }
+      .logo {
+        width: 100px;
+        height: 100px;
+      }
     }
   </style>
 </head>
@@ -46,70 +129,17 @@
   <div class="overlay">
     <img src="prp.png" alt="AnthV Logo" class="logo">
     <h1>AnthV</h1>
-
-    <!-- Tag-line WITH e-mail icon -->
-    <p>Composer & Creator — Exploring the light and the shadows
+    <p>Composer & Creator&nbsp;— Exploring the light and the shadows
       <a class="email-link" href="mailto:anthv.official@gmail.com" title="Email">
-        <!-- envelope -->
-        <svg viewBox="0 0 512 512" aria-hidden="true" fill="currentColor">
-          <path d="M502.3 190.8 327.4 338a37 37 0 0 1-52.7 0L9.7 190.8A20 20 0 0 1 0 170.9V144c0-26.5 21.5-48 48-48h416c26.5 0 48 21.5 48 48v26.9a20 20 0 0 1-9.7 19.9z"/>
-          <path d="M480 224.6 325.9 353.5a57 57 0 0 1-77.8 0L32 224.6V368c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V224.6z"/>
-        </svg>
+        <i class="fas fa-envelope"></i>
       </a>
     </p>
-
-    <!-- Social links -->
     <div class="links">
-
-      <!-- X / Twitter -->
-      <a href="https://x.com/AnthV_qwq" target="_blank" rel="noopener">
-        <svg viewBox="0 0 1200 1227" aria-hidden="true">
-          <path fill="#000" d="M458 544 0 0h292l308 344 408-344h184L660 496l548 633H916L552 752 108 1129H0l458-585z"/>
-        </svg>
-        <span>X (Twitter)</span>
-      </a>
-
-      <!-- Instagram (gradient) -->
-      <a href="https://instagram.com/anthv_ins" target="_blank" rel="noopener">
-        <svg viewBox="0 0 448 512" aria-hidden="true">
-          <defs>
-            <linearGradient id="insta-grad" x1="0%" y1="100%" x2="100%" y2="0%">
-              <stop offset="0%" stop-color="#f58529"/>
-              <stop offset="50%" stop-color="#dd2a7b"/>
-              <stop offset="100%" stop-color="#8134af"/>
-            </linearGradient>
-          </defs>
-          <path fill="url(#insta-grad)" d="M224 73c-58.9 0-66.3.2-89.5.9-23.1.7-38.9 2.5-52.7 5.2A86 86 0 0 0 61 96.6a86 86 0 0 0-16.5 20.8c-2.8 5.5-5.4 13.2-7 23.3C35.1 163.9 35 171.3 35 230s.1 66.1 2.5 89.3c1.6 10.1 4.2 17.8 7 23.3a86 86 0 0 0 16.5 20.8 86 86 0 0 0 20.8 16.5c5.5 2.8 13.2 5.4 23.3 7C157.7 389 165.1 389 224 389s66.3-.1 89.5-2.5c10.1-1.6 17.8-4.2 23.3-7a86 86 0 0 0 20.8-16.5 86 86 0 0 0 16.5-20.8c2.8-5.5 5.4-13.2 7-23.3 2.4-23.2 2.5-30.6 2.5-89.3s-.1-66.1-2.5-89.3c-1.6-10.1-4.2-17.8-7-23.3A86 86 0 0 0 357 96.6a86 86 0 0 0-20.8-16.5c-5.5-2.8-13.2-5.4-23.3-7C290.3 73.2 282.9 73 224 73Zm0 84.5a72.5 72.5 0 1 1 0 145 72.5 72.5 0 0 1 0-145Zm90.8-39.9a19.8 19.8 0 1 1 0 39.6 19.8 19.8 0 0 1 0-39.6Z"/>
-        </svg>
-        <span>Instagram</span>
-      </a>
-
-      <!-- YouTube -->
-      <a href="https://youtube.com/@anthv.official" target="_blank" rel="noopener">
-        <svg viewBox="0 0 576 512" aria-hidden="true">
-          <rect width="576" height="512" rx="90" ry="90" fill="#FF0000"/>
-          <polygon points="240,176 240,336 400,256" fill="#FFFFFF"/>
-        </svg>
-        <span>YouTube</span>
-      </a>
-
-      <!-- SoundCloud -->
-      <a href="https://soundcloud.com/anthv_official" target="_blank" rel="noopener">
-        <svg viewBox="0 0 640 512" aria-hidden="true">
-          <path fill="#FF7700" d="M537.6 226.6c-4-1-8.1-1.5-12.3-1.5-30.9 0-56 25.1-56 56 0 .5 0 1 .1 1.4-9.7-5.3-20.9-8.4-32.9-8.4-30.9 0-56 25.1-56 56 0 2 .1 4 .3 5.9-12.9-9.9-29-15.9-46.6-15.9-43 0-78 35-78 78h316c57.3 0 104-46.7 104-104 0-49-34-89.6-78.6-98.5z"/>
-        </svg>
-        <span>SoundCloud</span>
-      </a>
-
-      <!-- Twitch -->
-      <a href="https://twitch.tv/AnthV_qwq" target="_blank" rel="noopener">
-        <svg viewBox="0 0 512 512" aria-hidden="true">
-          <path fill="#9146FF" d="M80 16 16 96v304h112v96h96l96-96h80l112-112V16H80zm368 240-64 64h-96l-96 96v-96H112V48h336v208z"/>
-          <rect x="224" y="128" width="48" height="112" fill="#FFFFFF"/>
-          <rect x="320" y="128" width="48" height="112" fill="#FFFFFF"/>
-        </svg>
-        <span>Twitch</span>
-      </a>
+      <a href="https://x.com/AnthV_qwq" ><i class="fab fa-x-twitter"></i><span>Twitter</span></a>
+      <a href="https://instagram.com/anthv_ins" ><i class="fab fa-instagram"></i><span>Instagram</span></a>
+      <a href="https://youtube.com/@anthv.official" ><i class="fab fa-youtube"></i><span>YouTube</span></a>
+      <a href="https://soundcloud.com/anthv_official" ><i class="fab fa-soundcloud"></i><span>SoundCloud</span></a>
+      <a href="https://twitch.tv/AnthV_qwq" ><i class="fab fa-twitch"></i><span>Twitch</span></a>
     </div>
   </div>
 </body>
